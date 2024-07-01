@@ -26,7 +26,15 @@ Below is a list of available commands and their descriptions:
      gmc gacp "your commit message"
      ```
 
-2. **gmc gs**
+2. **gmc initrepo <message> <url>**
+
+   - Description: Initializes a new repository with a remote origin, commit message, and pushes to the master branch.
+   - Usage:
+     ```sh
+     gmc initrepo "your commit message" "https://github.com/user/repo.git"
+     ```
+
+3. **gmc gs**
 
    - Description: Displays the current status of the repository.
    - Usage:
@@ -34,7 +42,7 @@ Below is a list of available commands and their descriptions:
      gmc gs
      ```
 
-3. **gmc gp**
+4. **gmc gp**
 
    - Description: Pulls the latest changes from the repository.
    - Usage:
@@ -42,7 +50,7 @@ Below is a list of available commands and their descriptions:
      gmc gp
      ```
 
-4. **gmc gcb <branch>**
+5. **gmc gcb <branch>**
 
    - Description: Creates and checks out a new branch.
    - Usage:
@@ -50,7 +58,7 @@ Below is a list of available commands and their descriptions:
      gmc gcb "new-branch"
      ```
 
-5. **gmc gm <branch>**
+6. **gmc gm <branch>**
 
    - Description: Merges the specified branch into the current branch.
    - Usage:
@@ -58,7 +66,7 @@ Below is a list of available commands and their descriptions:
      gmc gm "branch-to-merge"
      ```
 
-6. **gmc gf**
+7. **gmc gf**
 
    - Description: Fetches the latest changes from the repository.
    - Usage:
@@ -66,7 +74,7 @@ Below is a list of available commands and their descriptions:
      gmc gf
      ```
 
-7. **gmc gl**
+8. **gmc gl**
 
    - Description: Displays the commit history.
    - Usage:
@@ -74,7 +82,7 @@ Below is a list of available commands and their descriptions:
      gmc gl
      ```
 
-8. **gmc help**
+9. **gmc help**
    - Description: Displays the help information with available commands and their descriptions.
    - Usage:
      ```sh

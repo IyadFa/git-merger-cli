@@ -6,7 +6,7 @@ const program = new Command();
 
 // Define the version and description of the CLI
 program
-  .version("2.0.1")
+  .version("2.1.1")
   .description("A CLI for common git commands with shortcuts");
 
 // Define the gacp command
@@ -31,6 +31,31 @@ program
   });
 
 // Define other commands
+program
+  .command("initrepo <message> <url>")
+  .description(
+    "Initialize a new repository with a remote origin, commit, and push"
+  )
+  .action((message, url) => {
+    try {
+      console.log("Running git add .");
+      execSync("git add .", { stdio: "inherit" });
+
+      console.log(`Running git commit -m "${message}"`);
+      execSync(`git commit -m "${message}"`, { stdio: "inherit" });
+
+      console.log(`Running git remote add origin ${url}`);
+      execSync(`git remote add origin ${url}`, { stdio: "inherit" });
+
+      console.log("Running git push -u origin master");
+      execSync("git push -u origin master", { stdio: "inherit" });
+
+      console.log("Repository initialized and pushed to remote origin.");
+    } catch (error) {
+      console.error("Error initializing repository:", error.message);
+    }
+  });
+
 program
   .command("gs")
   .description("git status")
