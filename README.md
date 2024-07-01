@@ -9,7 +9,7 @@
 Install `gmc` globally using npm:
 
 ```sh
-npm install -g gmc-cli
+npm install -g git-merger-cli
 ```
 
 ### Usage
