@@ -1,4 +1,4 @@
-## gmc: Git Command Merger CLI
+## gmc: Git Commands Merger CLI
 
 ### Overview
 
