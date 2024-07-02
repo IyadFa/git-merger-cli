@@ -6,7 +6,7 @@ const program = new Command();
 
 // Define the version and description of the CLI
 program
-  .version("2.1.2")
+  .version("2.1.3")
   .description("A CLI for common git commands with shortcuts");
 
 // Define the gacp command
