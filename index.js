@@ -6,7 +6,7 @@ const program = new Command();
 
 // Define the version and description of the CLI
 program
-  .version("2.1.3")
+  .version("2.1.4")
   .description("A CLI for common git commands with shortcuts");
 
 // Define the gacp command
@@ -132,6 +132,7 @@ program
 
       Commands:
         gacp <message>         git add commit push with a commit message
+        initrepo <message> <url> Initialize a new repository with a remote origin, commit, and push
         gs                     git status
         gp                     git pull
         gcb <branch>           git checkout -b <branch_name>
