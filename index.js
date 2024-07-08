@@ -6,7 +6,7 @@ const program = new Command();
 
 // Define the version and description of the CLI
 program
-  .version("2.2.0")
+  .version("2.2.1")
   .description("A CLI for common git commands with shortcuts");
 
 // Define the gacp command
@@ -90,7 +90,7 @@ program
   });
 
 program
-  .command("!gcb <branch>")
+  .command("ngcb <branch>")
   .description("git checkout -b <branch_name> if not exists")
   .action((branch) => {
     try {
@@ -159,7 +159,7 @@ program
         gs                     git status
         gp                     git pull
         gcb <branch>           git checkout -b <branch_name>
-        !gcb <branch>          git checkout <branch_name> if not exists
+        ngcb <branch>          git checkout <branch_name> if not exists
         gsh <branch>           git checkout <branch_name>
         gm <branch>            git merge <branch_name>
         gf                     git fetch
