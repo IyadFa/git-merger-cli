@@ -1,18 +1,20 @@
 {
   "name": "git-merger-cli",
-  "version": "2.2.3",
+  "version": "2.2.4",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "prepare": "npm run build"
   },
   "bin": {
-    "gmc": "./index.js"
+    "gmc": "dist/index.js"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "commander": "^12.1.0"
+    "commander": "^12.1.0",
+    "package-json": "^10.0.0"
   },
   "repository": {
     "type": "git",
@@ -28,5 +30,9 @@
     "github",
     "bitbucket",
     "gitlab"
-  ]
+  ],
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "typescript": "^5.5.3"
+  }
 }
