@@ -58,7 +58,23 @@ Below is a list of available commands and their descriptions:
      gmc gcb "new-branch"
      ```
 
-6. **gmc gm <branch>**
+6. **gmc ngcb <branch>**
+
+- Description: Checks out an existing branch, or creates and checks out a new branch if it doesn't exist.
+- Usage:
+  ```sh
+  gmc ngcb "branch-name"
+  ```
+
+7. **gmc ngcb <branch>**
+
+- Description: Checks out the specified branch.
+- Usage:
+  ```sh
+  gmc gsh "branch-name"
+  ```
+
+7. **gmc gm <branch>**
 
    - Description: Merges the specified branch into the current branch.
    - Usage:
@@ -66,7 +82,7 @@ Below is a list of available commands and their descriptions:
      gmc gm "branch-to-merge"
      ```
 
-7. **gmc gf**
+8. **gmc gf**
 
    - Description: Fetches the latest changes from the repository.
    - Usage:
@@ -74,7 +90,7 @@ Below is a list of available commands and their descriptions:
      gmc gf
      ```
 
-8. **gmc gl**
+9. **gmc gl**
 
    - Description: Displays the commit history.
    - Usage:
@@ -82,12 +98,13 @@ Below is a list of available commands and their descriptions:
      gmc gl
      ```
 
-9. **gmc help**
-   - Description: Displays the help information with available commands and their descriptions.
-   - Usage:
-     ```sh
-     gmc help
-     ```
+10. **gmc help**
+
+- Description: Displays the help information with available commands and their descriptions.
+- Usage:
+  ```sh
+  gmc help
+  ```
 
 ### Example
 
