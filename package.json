@@ -10,7 +10,7 @@
     "gmc": "./index.js"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "commander": "^12.1.0"
   },
