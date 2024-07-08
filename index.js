@@ -6,7 +6,7 @@ const program = new Command();
 
 // Define the version and description of the CLI
 program
-  .version("2.1.4")
+  .version("2.2.0")
   .description("A CLI for common git commands with shortcuts");
 
 // Define the gacp command
@@ -79,6 +79,29 @@ program
   });
 
 program
+  .command("gsh <branch>")
+  .description("git checkout <branch_name>")
+  .action((branch) => {
+    try {
+      execSync(`git checkout ${branch}`, { stdio: "inherit" });
+    } catch (error) {
+      console.error("Error executing git checkout:", error.message);
+    }
+  });
+
+program
+  .command("!gcb <branch>")
+  .description("git checkout -b <branch_name> if not exists")
+  .action((branch) => {
+    try {
+      execSync(`git checkout ${branch}`, { stdio: "inherit" });
+    } catch (error) {
+      console.error("Error executing git checkout:", error.message);
+      execSync(`git checkout -b ${branch}`, { stdio: "inherit" });
+    }
+  });
+
+program
   .command("gcb <branch>")
   .description("git checkout -b <branch_name>")
   .action((branch) => {
@@ -136,6 +159,8 @@ program
         gs                     git status
         gp                     git pull
         gcb <branch>           git checkout -b <branch_name>
+        !gcb <branch>          git checkout <branch_name> if not exists
+        gsh <branch>           git checkout <branch_name>
         gm <branch>            git merge <branch_name>
         gf                     git fetch
         gl                     git log
